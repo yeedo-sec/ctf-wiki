@@ -26,7 +26,7 @@ A选取随机数$r \in Z_{p-1}$ ，对明文加密$E_k(m,r)=(y_1,y_2)$ 。其中
 
 ### 解密
 
-$D_k(y_1,y_2)=y_2(y_1^k)^-1 \bmod p \equiv m(g^k)^r(g^{rk})^{-1} \equiv m \bmod p$ 。
+$D_k(y_1,y_2)=y_2(y_1^k)^{-1} \bmod p \equiv m(g^k)^r(g^{rk})^{-1} \equiv m \bmod p$ 。
 
 ### 难点
 
@@ -251,9 +251,9 @@ $y(A-1)-k(p-1)=x$
 
 这里我们知道 A，p，x，则我们可以利用扩展欧几里得定理求得
 
-$s(A-1)+w(p-1)=gcd(A-1,t-1)$
+$s(A-1)+w(p-1)=gcd(A-1,p-1)$
 
-如果gcd(A-1,t-1)=d，则我们直接计算
+如果gcd(A-1,p-1)=d，则我们直接计算
 
 $t^s \equiv m^{s(A-1)} \equiv m^d \bmod p$
 
